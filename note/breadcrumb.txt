@@ -1,0 +1,32 @@
+<?php
+	
+	function printbreadcrumb() {
+		if (isset($_GET['cat_id'])) {
+			$category_id = $_GET['cat_id'];
+			$sql = "SELECT *
+					FROM tbl_categories
+					WHERE id='".$category_id."'";
+			$res = mysqli_query($conn, $sql);
+			$row = mysqli_fetch_array($res, MYSQLI_ASSOC);
+			if ($row['parent_id']) { // if this node has parent
+				printbreadcrumb($row['parent_id']); // make recursive call to this function
+			}
+			echo $row['text'].' > ';			
+		} else {
+			echo "Home";
+		}
+		return;
+	}
+
+?>
+
+<div class="breadcrumb-place breadcrumb-place-image1 leftstyle leftbread tac">               
+	<div class="row clearfix">	   
+		<div class="breadcrumbIn">
+			You are here :
+			<ul>
+				<!--<li><?= printbreadcrumb(); ?></li>-->
+			</ul>
+		</div><!-- breadcrumb -->
+	</div><!-- row -->
+</div><!-- breadcrumb -->

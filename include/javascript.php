@@ -1,0 +1,9 @@
+<!-- Javascripts -->
+<!--<script type="text/javascript" src="js/jquery/jquery.js?ver=1.11.0"></script>-->
+<script type="text/javascript" src="js/jquery-3.1.0.min.js"></script>
+<script type="text/javascript" src="js/themetor.js?ver=1.0"></script>
+<script type="text/javascript" src="js/jquery.nicescroll.min.js?ver=3.5.1"></script>
+<script type="text/javascript" src="js/jquery.prettyPhoto.js?ver=3.1.6"></script>
+<script type="text/javascript" src="http://maps.google.com/maps/api/js"></script>
+<script type="text/javascript" src="js/custom.js?ver=1.0"></script>
+<script type="text/javascript" src="lib/jstree/jstree.min.js"></script>
